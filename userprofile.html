@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="userprofile.css" />
+  </head>
+  <body id="UB">
+    <header class="header">
+        <!--navigation_Panel-->
+        <a href="Home.html" class="Logo"
+          ><img src="Logo.jpg" alt="LOGO" class="Logo"
+        /></a>
+  
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+          <i class="bx bx-menu" id="close-icon"></i>
+          <i class="bx bx-x" id="menu-icon"></i>
+        </label>
+        <nav class="navbar">
+          <a href="Home.html" style="--i: 0">Home <span></span></a>
+          <a href="volunteer page.html" style="--i: 1">Volenteer <span></span></a>
+          <a href="Table.html" style="--i: 2">Comparison Table <span></span></a>
+          <a href="userprofile.html" class="active" style="--i: 3">User Profile<span></span></a>
+          <a href="feedback-component.html" style="--i: 4">Feedback <span></span></a>
+          <a href="Sitemap.html" style="--i: 5">Site Map<span></span></a>
+          <a href="team-component.html" style="--i: 6">Team<span></span></a>
+        </nav>
+    </header>
+    <div class="profile-containar">
+      <!-- User Avatar and Information -->
+      <div class="profile-card">
+        <img src="Avatar.jpg" alt="User Avatar" class="avatar" />
+        <h2>Luna Skye</h2>
+        <p>Computer Science Student</p>
+        <p>"A quotation that captures this user's personality"</p>
+        <ul class="user-details">
+          <li><strong>Age:</strong> 25</li>
+          <li><strong>Work:</strong> Student</li>
+          <li><strong>Status:</strong> Single</li>
+          <li><strong>Location:</strong> Srilanka</li>
+        </ul>
+      </div>
+
+      <div class="info-section">
+        <h3>Skills</h3>
+        <div class="skill">
+          <p>Communication</p>
+          <p>Teamwork</p>
+          <p>Leadership</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%"></div>
+          </div>
+
+        <h3>Goals</h3>
+        <ul>
+          <li>Goal 1 - Develop problem-solving skills</li>
+          <li>Goal 2 - Become proficient in programming</li>
+        </ul>
+
+        <section class="main-content">
+            <div class="bio">
+              <h3>About Me</h3>
+              <p>
+                I'm a proactive computer science graduate with strong programming skills, 
+                excited about web development and software engineering. I aim to utilize my coding 
+                expertise to create innovative applications that elevate user experiences and drive 
+                technological progress.
+              </p>
+            </div>
+
+        <h3>Experience</h3>
+        <p>Being a Computer Science student is both exciting and challenging, involving programming, 
+            algorithms, databases, and cybersecurity. Hands-on projects, coding competitions, and 
+            internships provide valuable experience. Debugging and managing assignments enhance 
+            problem-solving skills. With evolving technology, staying updated is essential, but the field 
+            offers diverse career opportunities in software development, AI, and cybersecurity.
+        </p>
+      </div>
+
+      <!-- Volunteering Section -->
+      <div class="volunteering">
+        <h3>Volunteering Availability</h3>
+        <div id="calendar"></div>
+      </div>
+
+
+      <div class="interests">
+        <h3>UN Goals I Support</h3>
+        <div class="icons">
+          <img src="goal1.jpg" alt="Gender Equality" />
+          <img src="goal2.avif" alt="Climate Action" />
+          <img src="goal3.jpg" alt="Quality Education" />
+        </div>
+      </div>
+      <div class="contact">
+        <h3>Contact Me</h3>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <h3 class="H3">Contact Us</h3>
+        <div class="elements">
+          <p>
+            Email:
+            <a href="mailto:dilshard.20230276@iit.ac.lk"
+              >dilshard.20230276@iit.ac.lk</a>
+          </p>
+          <p>Phone: <br />+94 78 725 4680</p>
+          <p>Address: Colombo, Sri Lanka</p>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h3 class="H3">Quick Links</h3>
+        <ul class="list">
+          <li><a href="PageEditorStudent1.html">PageEditorStudent1</a></li>
+          <li><a href="pageeditor2.html">PageEditorStudent2</a></li>
+          <li><a href="PageEditorStudent3.html">PageEditorStudent3</a></li>
+          <li><a href="Pageeditorstudent4.html">PageEditorStudent4</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <p>Copyright &copy; 2025 | Designed By Dheesha Dilshard</p>
+    </div>
+  </footer>    
+  <script src="userprofile.js"></script>
+  </body>
+</html>
+
