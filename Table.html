@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link rel="stylesheet" href="Table.css" />
+    <link rel="stylesheet" href="Home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="TB">
+    <header class="header">
+      <!--navigation Panel-->
+
+      <a href="Home.html" class="logo"
+        ><img src="images/Home/Life.jpg" alt="LOGO" class="logo"
+      /></a>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="close-icon"></i>
+        <i class="bx bx-x" id="menu-icon"></i>
+      </label>
+      <nav class="navbar">
+        <a href="Home.html" style="--i: 0">Home <span></span></a>
+        <a href="volunteer page.html" style="--i: 1">Volenteer <span></span></a>
+        <a href="Table.html" class="active" style="--i: 2"
+          >Comparison Table <span></span
+        ></a>
+        <a href="Userprofile.html" style="--i: 3">User Profile <span></span></a>
+        <a href="feedback-component.html" style="--i: 4"
+          >Feedback <span></span
+        ></a>
+        <a href="Sitemap.html" style="--i: 5">Site Map <span></span></a>
+        <a href="team-component.html" style="--i: 6">Team <span></span></a>
+      </nav>
+    </header>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <main>
+      <section class="table-section">
+        <div class="table-header">
+          <img
+            src="images/Table/Table logo.png"
+            alt="Life on earth Logo"
+            class="table-logo"
+          />
+          <h1>Life on Land Impact Data</h1>
+          <p>Track progress on land change across different regions</p>
+        </div>
+
+        <div class="table-container">
+          <table class="impact-table" aria-label="Climate Action Impact Data">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div
+                    class="header-cell"
+                    data-tooltip="Geographic regions where we operate"
+                  >
+                    <span>🌍</span>
+                    Region
+                  </div>
+                </th>
+                <th scope="col">
+                  <div
+                    class="header-cell"
+                    data-tooltip="Number of trees planted through our initiatives"
+                  >
+                    <span>🌳</span>
+                    Trees Planted
+                  </div>
+                </th>
+                <th scope="col">
+                  <div
+                    class="header-cell"
+                    data-tooltip="Reduction in carbon emissions (metric tons)"
+                  >
+                    <span>🏭</span>
+                    CO2 Reduced
+                  </div>
+                </th>
+                <th scope="col">
+                  <div
+                    class="header-cell"
+                    data-tooltip="Number of active volunteers in the region"
+                  >
+                    <span>👥</span>
+                    Volunteers
+                  </div>
+                </th>
+                <th scope="col">
+                  <div
+                    class="header-cell"
+                    data-tooltip="Status of climate goals in the region"
+                  >
+                    <span>📊</span>
+                    Goal Status
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#" class="region-link">Africa</a></td>
+                <td>3.9 million hectares lost</td>
+                <td>15,000</td>
+                <td>5,200</td>
+                <td><span class="status-icon achieved">✓</span></td>
+              </tr>
+              <tr>
+                <td><a href="#" class="region-link">South America</a></td>
+                <td>2.6 million hectares lost</td>
+                <td>12,500</td>
+                <td>4,800</td>
+                <td><span class="status-icon in-progress">→</span></td>
+              </tr>
+              <tr>
+                <td><a href="#" class="region-link">Asia</a></td>
+                <td>1.2 million hectares gained</td>
+                <td>18,200</td>
+                <td>6,500</td>
+                <td><span class="status-icon achieved">✓</span></td>
+              </tr>
+              <tr>
+                <td><a href="#" class="region-link">Oceania</a></td>
+                <td>0.4 million hectares gained</td>
+                <td>9,800</td>
+                <td>3,200</td>
+                <td><span class="status-icon in-progress">→</span></td>
+              </tr>
+              <tr>
+                <td><a href="#" class="region-link">Europe</a></td>
+                <td>0.3 million hectares gained</td>
+                <td>11,500</td>
+                <td>4,100</td>
+                <td><span class="status-icon in-progress">→</span></td>
+              </tr>
+              <tr>
+                <td><a href="#" class="region-link">Middle East</a></td>
+                <td>90,000</td>
+                <td>7,200</td>
+                <td>2,800</td>
+                <td><span class="status-icon needs-attention">!</span></td>
+              </tr>
+              <tr>
+                <td><a href="#" class="region-link">Caribbean</a></td>
+                <td>45,000</td>
+                <td>4,500</td>
+                <td>1,500</td>
+                <td><span class="status-icon in-progress">→</span></td>
+              </tr>
+              <tr>
+                <td><a href="#" class="region-link">Oceania</a></td>
+                <td>75,000</td>
+                <td>6,800</td>
+                <td>2,200</td>
+                <td><span class="status-icon achieved">✓</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <div class="table-summary">
+                    <p>
+                      Total Impact: 1,310,000 Trees Planted | 85,500 Metric Tons
+                      CO2 Reduced | 30,300 Active Volunteers
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3 class="H3">Contact Us</h3>
+          <div class="elements">
+            <p>
+              Email:
+              <a href="mailto:champika.20233107@iit.ac.lk"
+                >champika.20233107@iit.ac.lk</a
+              >
+            </p>
+            <p>Phone: <br />+94 78 725 4680</p>
+            <p>Address: Colombo, Sri Lanka</p>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h3 class="H3">Quick Links</h3>
+          <ul class="list">
+            <li><a href="PageEditorStudent1.html">PageEditorStudent1</a></li>
+            <li><a href="pageeditor2.html">PageEditorStudent2</a></li>
+            <li><a href="PageEditorStudent3.html">PageEditorStudent3</a></li>
+            <li><a href="Pageeditorstudent4.html">PageEditorStudent4</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>Copyright &copy; 2025 | Designed By Champika Kasun</p>
+      </div>
+    </footer>
+  </body>
+</html>

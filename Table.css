@@ -1,0 +1,178 @@
+/* Table Section Styles */
+.TB {
+  background-color: none;
+  background-image: url(images/Table/Backg.jpg);
+}
+.table-section {
+  padding: calc(var(--header-height) + 2rem) var(--spacing-lg)
+    var(--section-padding);
+  background-color: var(--light-color);
+}
+
+.table-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+  padding: 5px;
+  overflow: hidden;
+  height: auto;
+}
+
+.table-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(images/Table/Section\ wall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -1;
+  background-position: 0% 20%;
+}
+
+.table-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Table Container */
+.table-container {
+  max-width: var(--max-width);
+  margin: 50px 50px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* Table Styles */
+.impact-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+
+/* Header Styles */
+.impact-table thead {
+  background-color: rgb(94, 89, 89);
+  color: whitesmoke;
+}
+
+.header-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.header-cell span {
+  font-size: 1.5rem;
+}
+
+/* Tooltip Styles */
+.header-cell[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background: var(--dark-color);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.header-cell[data-tooltip]::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: var(--dark-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.header-cell:hover[data-tooltip]::before,
+.header-cell:hover[data-tooltip]::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Body Styles */
+.impact-table tbody tr {
+  transition: all 0.3s ease;
+  background-color: rgba(120, 211, 211, 0.663);
+}
+
+.impact-table tbody tr:nth-child(even) {
+  background-color: rgba(236, 240, 241, 0.5);
+}
+
+.impact-table tbody tr:hover {
+  transform: translateX(5px);
+}
+
+.impact-table td {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--light-color);
+}
+
+/* Region Link Styles */
+.region-link {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Status Icon Styles */
+.status-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.status-icon.achieved {
+  background-color: rgba(54, 169, 90, 0.959);
+  color: white;
+}
+
+.status-icon.in-progress {
+  background-color: rgba(241, 196, 15, 0.2);
+  color: white;
+}
+
+.status-icon.needs-attention {
+  background-color: rgb(185, 185, 104);
+  color: var(--danger-color);
+}
+
+/* Footer Styles */
+.table-summary {
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--dark-color);
+  background-color: rgba(236, 240, 241, 0.5);
+}
