@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="Home.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content page student1</title>
+    <style>
+    .heading{
+        margin-top: 10px;
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        color: beige;
+    }
+    .heading :hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.5s ease;
+        background-color: rgb(107, 174, 156);
+        color: rgb(18, 30, 56);
+    }
+    .contentContainer{
+        margin-top: 10px;
+        position: relative;
+        display: block; 
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        margin-left: 100px; 
+        margin-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        background-color: azure;
+        box-shadow: 0 0 20px rgba(116, 198, 161, 0.5);   
+        border-radius: 20px; 
+        color: rgb(4, 4, 4);   
+         
+        font-weight: bold;
+    }
+    .contentContainer p{
+        padding: 10px;
+    }
+    .introduction{
+        margin-top: 10px;
+        display: inline;
+        position: relative;
+        font-size: larger;
+    }
+    .content1{
+        margin-top: 10px;
+        position: relative;
+        display: block; 
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+        margin-left: 100px; 
+        margin-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 20px rgba(26, 104, 50, 0.5);  
+        border-radius: 20px; 
+    
+        
+    }
+    .content2{
+        margin-top: 10px;
+        position: relative;
+        display: block; 
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+        margin-left: 100px; 
+        margin-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 20px rgba(26, 104, 50, 0.5);  
+        border-radius: 20px; 
+        
+        
+    }
+    .content3{
+        margin-top: 10px;
+        position: relative;
+        display: block; 
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+        margin-left: 100px; 
+        margin-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 20px rgba(26, 104, 50, 0.5);  
+        border-radius: 20px; 
+        
+    }
+    .content4{
+        margin-top: 10px;
+        position: relative;
+        display: block; 
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+        margin-left: 100px; 
+        margin-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 20px rgba(26, 104, 50, 0.5);  
+        border-radius: 20px; 
+
+        
+    }
+    .content5{
+        margin-top: 10px;
+        position: relative;
+        display: block; 
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+        margin-left: 100px; 
+        margin-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 20px rgba(26, 104, 50, 0.5);  
+        border-radius: 20px; 
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h2:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.3s ease;
+        background-color: white;
+        color: black;
+    } 
+    #footerPart{
+        padding-top: 5%;
+        position: relative;
+        bottom: 0%;
+        left: 0%;
+        right: 0%; 
+    }
+    footer{
+        backdrop-filter: blur(50px);
+        color: white;
+        font-family: sans-serif;
+        padding-top: 10px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .container{
+        width: 1000px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .footer-content2{
+        width: 100%;
+    }
+    .footer-content2 ul{
+        text-align: justify;
+    }
+    .footer-content2 p{
+        width:180px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content3{
+        width: 100%;
+    }
+    .footer-content3 ul{
+        text-align: justify;
+    }
+    .footer-content3 p{
+        width:180px;
+        margin: auto;
+        padding: 7px;
+    }
+    .H3{
+        text-shadow: green;
+        font-size: 25px;
+        margin-bottom: 15px;
+        text-shadow: 2px 4px 8px rgba(0, 0, 0, 1); 
+        text-align: center;
+    }
+    .elements{
+        font-size: 19px;
+    }
+    /* header */
+
+body{     
+    background-image: url(wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed ;
+    background-repeat: no-repeat;
+}
+ 
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <body>
+            <header class="header">
+                <!--nav bar-->
+          
+                <a href="Home.html" class="logo"
+                  ><img src="images/Home/Life.jpg" alt="LOGO" class="logo"
+                /></a>
+          
+                <input type="checkbox" id="check" />
+                <label for="check" class="icons">
+                  <i class="bx bx-menu" id="close-icon"></i>
+                  <i class="bx bx-x" id="menu-icon"></i>
+                </label>
+                <nav class="navbar">
+                  <a href="Home.html" class="active" style="--i: 0">Home <span></span></a>
+                  <a href="volunteer page.html" style="--i: 1">Volenteer <span></span></a>
+                  <a href="Table.html" style="--i: 2">Comparison Table <span></span></a>
+                  <a href="Userprofile.html" style="--i: 3">User Profile<span></span></a>
+                  <a href="feedback-component.html" style="--i: 4">Feedback <span></span></a>
+                  <a href="Sitemap.html" style="--i: 5">Site Map<span></span></a>
+                  <a href="team-component.html" style="--i: 6">Team<span></span></a>
+                </nav>
+              </header>
+            <br><br><br><br><br><br><br><br>
+            <div class="heading">
+                <h1>FOREST CONSERVATION</h1>
+            </div>
+            <div class="contentContainer">
+                <svg class="downarrow" id="downarrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+                  </svg>
+                <diV class="introduction">
+                    <p>In addition to providing materials necessary for life on Earth,forests are important ecosystems
+                       that maintain biodiversity and control the climate. More than 80% of terrestrial species call 
+                       them home, and they also serve as the planet's lungs, taking in carbon dioxide and releasing oxygen.
+                       These habitats are threatened by the fast deforestation brought on by logging, agriculture,and 
+                       urbanization, which results in soil erosion, biodiversity loss, and climate change.The goal of forest
+                       conservation is to preserve and manage forests in a sustainable manner to maintain their ecological 
+                       balance and long-term health.This includes initiatives like legal forest protection, sustainable logging methods, 
+                       afforestation, and reforestation. In addition to protecting species, forest preservation guarantees future 
+                       generations clean air, clean water, and a stable climate.  Global collaboration, legislative reforms, and private 
+                       initiatives to support reforestation and ethical land use are all necessary for conservation.Forests are among the
+                       most important ecosystems on Earth, covering about 31% of the planet’s land area. They play a crucial role in 
+                       maintaining ecological balance by providing habitat for wildlife, regulating the water cycle, and absorbing carbon 
+                       dioxide, which helps mitigate climate change. Forests also support the livelihoods of millions of people, especially 
+                       indigenous communities who depend on them for food, medicine, and shelter.However, forests are under constant threat
+                       due to deforestation, illegal logging, agriculture, urbanization, and climate change. Each year, millions of hectares
+                       of forests are lost, leading to devastating consequences such as habitat destruction, loss of biodiversity, 
+                       soil degradation, and increased greenhouse gas emissions.Forest conservation focuses on protecting, restoring,
+                       and sustainably managing forested areas. This includes initiatives such as afforestation (planting new trees), 
+                       reforestation (restoring deforested areas), sustainable forestry practices, and the establishment of protected areas
+                       like national parks and wildlife reserves. Governments, organizations, and individuals all play a crucial role in
+                       conservation efforts by implementing policies, raising awareness, and supporting reforestation projects.
+                       By conserving forests, we ensure a healthier planet for future generations, protect biodiversity, and combat climate 
+                       change. Sustainable land management, responsible consumption, and community involvement are essential steps toward 
+                       achieving effective forest conservation.</p>
+
+                </diV>               
+                    <div class="image">
+                        <img src="images/content1/forest1.jpg" alt="forests">
+                        <img src="images/content1/forest2.jpg" alt="forests">
+                        <img src="images/content1/forest3.jpg" alt="forests">
+
+                    </div>
+
+                    <div class="content1">
+                        <h2>Importance forests</h2>
+                        <p>Forests are vital to life on Earth, providing essential ecological, economic, and social benefits.Their importance extends beyond just trees—they support biodiversity, regulate the climate, and sustain human livelihoods. Here are some key reasons why forests are crucial:</p>
+                        <h3>Environmental Benefits</h3>
+                        <p><b>Oxygen Production:</b>Forests produce oxygen through photosynthesis, making them the “lungs of the Earth.</p>
+                        <p><b>Carbon Sequestration:</b> They absorb carbon dioxide, reducing greenhouse gases and mitigating climate change.</p>
+                        <p><b>Water Cycle Regulation:</b>Forests help maintain rainfall patterns, filter water, and prevent droughts.</p>
+                        <p><b>Soil Conservation:</b>Tree roots hold soil together, preventing erosion and maintaining land fertility.</p>
+                        <h3>Economic and Social Benefits</h3>
+                        <p>Forest industries (timber, paper, medicine, and tourism) provide jobs and income for millions of people.</p>
+                        <p>Many indigenous and rural communities rely on forests for food, fuel, and traditional medicine.</p>
+                        <p>Ecotourism in forests promotes sustainable economic growth while preserving nature.</p>
+                        <h3>Cultural and Recreational Value</h3>
+                        <p>Forests are sacred in many cultures and play a role in spiritual and religious practices.</p>
+                        <p>They provide spaces for recreation, relaxation, and scientific research, improving human well-being.</p>
+                    </div>
+                    <div class="content2">
+                        <h2>Causes of Deforestation</h2>
+                        <p>Deforestation is the large-scale clearing of forests, often resulting in environmental degradation, loss of biodiversity, and climate change.The main causes of deforestation include:</p>
+                        <h3>Agricultural Expansion</h3>
+                        <p><b>Commercial Farming:</b>Large-scale plantations for crops like soy, palm oil, and coffee require clearing vast areas of forest.</p>
+                        <p><b>Subsistence Farming:</b> Small-scale farmers clear forests for food crops using slash-and-burn techniques.</p>
+                        <h3>Logging and Timber Industry</h3>
+                        <p><b>Fuelwood and Charcoal Production:</b>In many developing countries, forests are cleared for firewood and charcoal as primary energy sources.</p>
+                        <h3>Mining and Industrial Activitie</h3>
+                        <p><b>Oil, Gas, and Coal Extraction:</b> Mining operations clear forests and cause soil and water pollution.</p>
+                        <h3>Forest Fires</h3>
+                        <p><b>Natural Causes:</b>Wildfires can be triggered by lightning or extreme heat.</p>
+                        <p><b>Human Activities:</b>Intentional fires for land clearing or accidental fires from negligence contribute to massive forest loss.</p>
+                        <h3>Climate Change and Extreme Weather Events</h3>
+                        <p><b>Droughts and Heatwaves:</b>Prolonged dry conditions weaken forests, making them more susceptible to pests and fires.</p>
+                        <p><b>Storms and Hurricanes:</b>Strong winds and heavy rainfall can cause tree loss and ecosystem disruption.</p>
+                    </div>
+                    <div class="content3">
+                        <h2>Actions to Protect forests</h2>
+                        <p>Protecting forests is vital for biodiversity, climate regulation, and sustainability. Key actions include reforestation to restore lost trees 
+                           and sustainable forest management to balance conservation with resource use. Governments must enforce strict laws against illegal logging and 
+                           expand protected areas. Supporting eco-friendly products and reducing demand for unsustainable goods can ease pressure on forests. Empowering 
+                           local communities and raising awareness about conservation also play a crucial role. By taking these steps, we can ensure forests thrive for 
+                           future generations.</p>
+                    </div>
+                    <div class="content4">
+                        <h2>Future of Forest Conservation</h2>
+                        <p>The future of forest conservation depends on global efforts to adopt sustainable practices and innovative technologies. Reforestation and afforestation projects will play a key role in restoring lost forests, while advanced monitoring systems using satellites and AI will help track deforestation more effectively. Governments and organizations must strengthen policies and regulations to protect forests from illegal 
+                           logging and land conversion. Promoting sustainable industries and increasing public awareness will also be essential. By embracing these 
+                           strategies, we can ensure a greener, healthier planet for future generations.</p>
+                    </div>
+                    <div class="content5">
+                        <h2>How We Can Reduce Forest Conservation</h2>
+                        <p>To reduce deforestation and protect forests, we must adopt sustainable practices and policies. Promoting responsible logging, replanting trees, 
+                           and enforcing strict regulations can help prevent excessive tree loss. Sustainable agriculture, such as agroforestry and responsible land use, 
+                           reduces the need to clear forests for farming. Consumers can support conservation by choosing eco-friendly products made from sustainable materials. 
+                           Raising awareness and involving local communities in forest protection efforts also play a crucial role. By taking these actions, we can ensure the 
+                           long-term health of forests and their vital role in maintaining biodiversity and climate stability.</p>
+                    </div>
+
+                    <div>
+                        <p>Forest conservation is essential for maintaining biodiversity, regulating the climate, and supporting human livelihoods. Protecting forests requires 
+                           global efforts, including sustainable land management, strict policies, and community involvement. By reducing deforestation, promoting reforestation, 
+                           and adopting eco-friendly practices, we can ensure that forests continue to thrive for future generations. Our collective responsibility is to safeguard 
+                           these vital ecosystems, recognizing that a healthy planet depends on the well-being of its forests.</p>
+                    </div>
+                    <svg class="uparrow" id="uparrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"/>
+                      </svg>
+            </div>
+            <footer>
+                <div class="container">
+                  <div class="footer-content">
+                    <h3 class="H3">Contact Us</h3>
+                    <div class="elements">
+                      <p>
+                        Email:
+                        <a href="mailto:champika.20233107@iit.ac.lk"
+                          >champika.20233107@iit.ac.lk</a
+                        >
+                      </p>
+                      <p>Phone: <br />+94 78 725 4680</p>
+                      <p>Address: Colombo, Sri Lanka</p>
+                    </div>
+                  </div>
+                  <div class="footer-content">
+                    <h3 class="H3">Quick Links</h3>
+                    <ul class="list">
+                        <li><a href="PageEditorStudent1.html">PageEditorStudent1</a></li>
+                        <li><a href="pageeditor2.html">PageEditorStudent2</a></li>
+                        <li><a href="PageEditorStudent3.html">PageEditorStudent3</a></li>
+                        <li><a href="Pageeditorstudent4.html">PageEditorStudent4</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="bottom-bar">
+                  <p>Copyright &copy; 2025 | Designed By Samadhi Tharushika</p>
+                </div>
+              </footer>
+            </body>
+          </html>
+          

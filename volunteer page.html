@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">\
+    <link rel="stylesheet" href="Home.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Life on land</title>
+    <style>
+        
+    body {
+        background-image: none;
+        background-color: #90a3a4ad; 
+            
+    }
+    .logo-img {
+        width:25px; 
+        height: auto; 
+    }
+    .volunteer-hero {
+        min-height: 60vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                    url('ef854422cef1c68c901c045241f1f4bf.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: var(--header-height);
+        text-align: center;
+        color: white;
+        padding: 2rem;
+    }
+    
+    .volunteer-hero h1 {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+        color: white;
+    }
+    
+    .programs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    
+    .program-filter {
+        padding: 0.8rem 1.5rem;
+        border: 2px solid var(--primary-color);
+        border-radius: var(--radius-md);
+        background: transparent;
+        color: var(--dark-color);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .program-filter:hover {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+    
+    .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-height: 800px;
+        overflow-y: auto;
+        padding-right: 1rem;
+    }
+    
+    .program-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .program-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .program-image {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .program-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .program-card:hover .program-image img {
+        transform: scale(1.1);
+    }
+    
+    .program-content {
+        padding: 1.5rem;
+    }
+    
+    .program-tag {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(46, 204, 113, 0.1);
+        color: var(--primary-color);
+        border-radius: 20px;
+        margin-bottom: 1rem;
+    }
+    
+    .program-details {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+        color: var(--neutral-color);
+        font-size: 0.9rem;
+    }
+    
+    .join-button {
+        width: 100%;
+        padding: 0.8rem;
+        background: var(--primary-color);
+        color: var(--white);
+        border: none;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .join-button:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+    
+    /* Ratings Section */
+    .ratings-section {
+        padding: var(--section-padding) var(--spacing-lg);
+        background: var(--white);
+    }
+    
+    .ratings-summary {
+        display: flex;
+        gap: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .overall-rating h2 {
+        font-size: 4rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .rating-subtitle {
+        font-size: 1.5rem;
+        color: var(--dark-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .total-reviews {
+        color: var(--neutral-color);
+    }
+    
+    .rating-stats {
+        flex-grow: 1;
+        max-width: 500px;
+    }
+    
+    .rating-bar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .bar {
+        flex-grow: 1;
+        height: 8px;
+        background: rgb(159, 157, 157);
+        border-radius: 4px;
+    }
+    
+    .fill {
+        height: 100%;
+        background: green;
+        border-radius: 4px;
+    }
+    
+    /* Reviews Grid */
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+        background-color: #b2b8b9;
+    }
+    
+    .review-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .review-header {
+        margin-bottom: 1rem;
+    }
+    
+    .stars {
+        color: #ffd700;
+        margin-bottom: 0.5rem;
+    }
+    
+    .review-text {
+        color: var(--neutral-color);
+        margin-bottom: 1rem;
+    }
+    
+    .see-more {
+        color: black;
+        font-weight: 500;
+    }
+    
+    .review-footer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--light-color);
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+    }
+    
+    /* Feedback Section */
+    .feedback-section {
+        background: #b2b8b9;
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .rating-input {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+    
+    .emoji-rating {
+        font-size: 3rem;
+        transition: transform 0.3s ease;
+        padding: 0.5rem;
+    }
+    
+    .emoji-rating:hover {
+        transform: scale(1.2);
+    }
+    
+    .feedback-form textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid var(--light-color);
+        border-radius: var(--radius-md);
+        margin-bottom: 1rem;
+        font-family: var(--body-font);
+        resize: vertical;
+    }
+    
+    .submit-button {
+        padding: 0.8rem 2rem;
+        background: rgb(75, 91, 87);
+        border: none;
+        
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .submit-button:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+    
+    .cancel-button {
+        padding: 0.8rem 2rem;
+        background: rgb(75, 91, 87);
+        border: none;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .cancel-button:hover {
+        background: #7f8c8d;
+        transform: translateY(-2px);
+    }
+    
+    
+    
+        .form-buttons {
+            flex-direction: column;
+        }
+    
+
+    .container {
+        width: 1050px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        
+        }
+
+    .footer-content {
+        width: 100%;   
+    }   
+    .H3 {
+        text-shadow: yellow;
+        font-size: 25px;
+        margin-bottom: 15px;
+        text-shadow: 2px 4px 8px rgba(0, 0, 0, 1);
+        text-align: center;
+        }
+    .footer-content p {
+        width: 180px;
+        margin: auto;
+        padding: 7px;
+       
+        }
+
+    .bottom-bar {
+        font-size: 15px;
+        backdrop-filter: blur(100px);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p {
+        color: white;
+        font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <body>
+            <header class="header">
+                <!--navigation_Panel-->
+          
+                <a href="Home.html" class="logo"
+                  ><img src="Life.jpg" alt="LOGO" class="logo"
+                /></a>
+          
+                <input type="checkbox" id="check" />
+                <label for="check" class="icons">
+                  <i class="bx bx-menu" id="close-icon"></i>
+                  <i class="bx bx-x" id="menu-icon"></i>
+                </label>
+                <nav class="navbar">
+                  <a href="Home.html" style="--i: 0">Home <span></span></a>
+                  <a href="volunteer page.html" class="active" style="--i: 1">Volenteer <span></span></a>
+                  <a href="Table.html" style="--i: 2">Comparison Table <span></span></a>
+                  <a href="Userprofile.html" style="--i: 3">User Profile<span></span></a>
+                  <a href="feedback-component.html" style="--i: 4">Feedback <span></span></a>
+                  <a href="Sitemap.html" style="--i: 5">Site Map<span></span></a>
+                  <a href="team-component.html" style="--i: 6">Team<span></span></a>
+                </nav>
+            </header>
+
+        <main>
+            <section class="volunteer-hero">
+                <div class="hero-content">
+                    <h1>Protect & Restore Nature</h1>
+                    <p>Join hands to conserve forests, protect biodiversity, and combat desertification</p>
+                </div>
+            </section>
+
+            <section class="volunteer-programs">
+                <div class="programs-header">
+                    <h2>Volunteer Programs</h2>
+                    <div class="filter-section">
+                        <select class="program-filter">
+                            <option value="popular">Most Popular</option>
+                            <option value="recent">Recently Added</option>
+                            <option value="upcoming">Upcoming</option>
+                            <option value="location">Near Me</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="3fc40470dfa67cee642a738313a61652.jpg" alt="Tree planting volunteer program">
+                        </div>
+                        <div class="program-content">
+                            <span class="program-tag">🌳 Reforestation</span>
+                            <h3>Forest Restoration</h3>
+                            <p>Help plant trees and restore degraded lands to combat deforestation.</p>
+                            
+                            <button class="join-button">Join Program</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card1">
+                        <div class="program-image">
+                            <img src="0fe2672e57c21d38e3be9f69aeb455b6.jpg" alt="Sustainable farming">
+                        </div>
+                        <div class="program-content">
+                            <span class="program-tag">🌾 Sustainable Farming</span>
+                            <h3>Eco-Friendly Agriculture</h3>
+                            <p>Promote sustainable farming practices and soil conservation.</p>
+                           
+                            <button class="join-button">Join Program</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card2">
+                        <div class="program-image">
+                            <img src="665bf197170ac6ac491ba620f5d504b9.jpg" alt="Wildlife conservation">
+                        </div>
+                        <div class="program-content">
+                            <span class="program-tag">🦌 Wildlife</span>
+                            <h3>Wildlife Conservation</h3>
+                            <p>Protect endangered species and restore natural habitats.</p>
+                            
+                            <button class="join-button">Join Program</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="20356a710903f9cb96c8cd53fcf6db2c.jpg" alt="Sustainable agriculture program">
+                        </div>
+                        <div class="program-content">
+                            <span class="program-tag">🌱 Agriculture</span>
+                            <h3>Community Gardens</h3>
+                            <p>Help maintain community gardens and teach sustainable farming practices.</p>
+                            
+                            <button class="join-button">Join Program</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ratings-section">
+                <div class="ratings-summary">
+                    <div class="overall-rating">
+                        <h2>9.4/10</h2>
+                        <p class="rating-subtitle">Exceptional</p>
+                        <p class="total-reviews">Based on 1,248 reviews</p>
+                    </div>
+                    <div class="rating-stats">
+                        <div class="rating-bar">
+                            <span>5 ★</span>
+                            <div class="bar"><div class="fill" style="width: 80%"></div></div>
+                            <span>87%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4 ★</span>
+                            <div class="bar"><div class="fill" style="width: 15%"></div></div>
+                            <span>8%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3 ★</span>
+                            <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                            <span>3%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2 ★</span>
+                            <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                            <span>1%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1 ★</span>
+                            <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                            <span>1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <h3>Life-changing experience</h3>
+                        </div>
+                        <p class="review-text">The Urban Forest Initiative was an amazing experience. I learned so much about local ecosystems and made great friends along the way...</p>
+                        <a href="#" class="see-more">See More</a>
+                        <div class="review-footer">
+                            <span class="reviewer">Sarah M.</span>
+                            <span class="review-date">March 15, 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <h3>Highly recommended</h3>
+                        </div>
+                        <p class="review-text">The community garden program helped me understand sustainable agriculture practices. The team is very supportive and knowledgeable...</p>
+                        <a href="#" class="see-more">See More</a>
+                        <div class="review-footer">
+                            <span class="reviewer">John D.</span>
+                            <span class="review-date">March 10, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-section">
+                    <h2>Share Your Experience</h2>
+                    <div class="rating-input">
+                        <button class="emoji-rating" aria-label="Rate 1 star">😞</button>
+                        <button class="emoji-rating" aria-label="Rate 2 stars">😐</button>
+                        <button class="emoji-rating" aria-label="Rate 3 stars">🙂</button>
+                        <button class="emoji-rating" aria-label="Rate 4 stars">😊</button>
+                        <button class="emoji-rating" aria-label="Rate 5 stars">😍</button>
+                    </div>
+                    <form class="feedback-form">
+                        <textarea placeholder="Write your review here... Share your experience with our volunteer programs." rows="5"></textarea>
+                        <div class="form-buttons">
+                            <button type="submit" class="submit-button">Submit Feedback</button>
+                            <button type="button" class="cancel-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+              <div class="footer-content">
+                <h3 class="H3">Contact Us</h3>
+                <div class="elements">
+                  <p>
+                    Email:
+                    <a href="mailto:champika.20233107@iit.ac.lk"
+                      >champika.20233107@iit.ac.lk</a
+                    >
+                  </p>
+                  <p>Phone: <br />+94 78 725 4680</p>
+                  <p>Address: Colombo, Sri Lanka</p>
+                </div>
+              </div>
+              <div class="footer-content">
+                <h3 class="H3">Quick Links</h3>
+                <ul class="list">
+                    <li><a href="PageEditorStudent1.html">PageEditorStudent1</a></li>
+                    <li><a href="pageeditor2.html">PageEditorStudent2</a></li>
+                    <li><a href="PageEditorStudent3.html">PageEditorStudent3</a></li>
+                    <li><a href="Pageeditorstudent4.html">PageEditorStudent4</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="bottom-bar">
+              <p>Copyright &copy; 2025 | Designed By Samadhi Tharushika</p>
+            </div>
+          </footer>
+        </body>
+</html>
+      
