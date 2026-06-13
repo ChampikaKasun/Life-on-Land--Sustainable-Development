@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="Home.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="feedback-component.css" />
+    <script
+      src="https://kit.fontawesome.com/1165876da6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <!--nav bar-->
+
+      <a href="Home.html" class="logo"
+        ><img src="images/Home/Life.jpg" alt="LOGO" class="logo"
+      /></a>
+
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="close-icon"></i>
+        <i class="bx bx-x" id="menu-icon"></i>
+      </label>
+      <nav class="navbar">
+        <a href="Home.html" style="--i: 0">Home <span></span></a>
+        <a href="volunteer page.html" style="--i: 1">Volenteer <span></span></a>
+        <a href="Table.html" style="--i: 2">Comparison Table <span></span></a>
+        <a href="Userprofile.html" style="--i: 3">User Profile<span></span></a>
+        <a href="feedback-component.html" style="--i: 4" class="active"
+          >Feedback <span></span
+        ></a>
+        <a href="Sitemap.html" style="--i: 5">Site Map<span></span></a>
+        <a href="team-component.html" style="--i: 6">Team<span></span></a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="form">
+        <form
+          action="mailto:champika.20233107@iit.ac.lk "
+          id="form"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="heading"><h2>We appreciate your Feedback</h2></div>
+          <br /><br />
+          <div class="input-field">
+            <label for="username" id="LabelText1">Name: </label><br />
+            <input
+              type="text"
+              name="Name"
+              id="username"
+              placeholder=" Enter your name"
+              required
+            />
+          </div>
+          <br /><br />
+          <div class="input-field">
+            <label for="email" id="LabelText2">Email: </label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder=" Enter your email"
+            />
+          </div>
+          <br /><br />
+          <div class="container1">
+            <label>Was this your first time visiting?</label><br /><br />
+            <input
+              type="radio"
+              name="First-Visit"
+              value="Yes"
+              required
+              id="yes"
+            />
+            <label for="yes">Yes</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="First-Visit" value="No" id="no" />
+            <label for="no">No</label>
+          </div>
+          <br /><br />
+          <div class="container2">
+            <label>Was this website informative & user-friendly?</label
+            ><br /><br />
+            <input
+              type="radio"
+              id="Y"
+              name="User-friendly"
+              value="Yes"
+              required
+            />
+            <label for="Y">Yes</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input
+              type="radio"
+              id="N"
+              name="User-friendly"
+              value="No"
+              required
+            />
+            <label for="N">No</label>
+            <br /><br />
+            <textarea
+              id="reason"
+              name="Suggestions"
+              rows="5"
+              cols="50"
+              placeholder="Suggest any improvement (if 'No' is selected)"
+            ></textarea>
+          </div>
+          <br />
+          <label id="Rate">Rate Us</label> <br /><br />
+          <div class="rating">
+            <input type="hidden" id="ratingInput" name="rating" value="" />
+            <i class="bx bx-star star" style="--i: 0"></i>
+            <i class="bx bx-star star" style="--i: 1"></i>
+            <i class="bx bx-star star" style="--i: 2"></i>
+            <i class="bx bx-star star" style="--i: 3"></i>
+            <i class="bx bx-star star" style="--i: 4"></i>
+          </div>
+
+          <textarea
+            id="opinion"
+            name="User-opinion"
+            cols="30"
+            rows="5"
+            placeholder="Describe your experience..."
+            required
+          ></textarea>
+          <br /><br />
+          <div class="btn-group">
+            <button type="submit" class="btn-submit">Submit</button>
+            <button type="reset" class="btn-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="feedback-component.js"></script>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3 class="H3">Contact Us</h3>
+          <div class="elements">
+            <p>
+              Email:
+              <a href="mailto:champika.20233107@iit.ac.lk"
+                >champika.20233107@iit.ac.lk</a
+              >
+            </p>
+            <p>Phone: <br />+94 78 725 4680</p>
+            <p>Address: Colombo, Sri Lanka</p>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h3 class="H3">Quick Links</h3>
+          <ul class="list">
+            <li><a href="PageEditorStudent1.html">PageEditorStudent1</a></li>
+            <li><a href="pageeditor2.html">PageEditorStudent2</a></li>
+            <li><a href="PageEditorStudent3.html">PageEditorStudent3</a></li>
+            <li><a href="Pageeditorstudent4.html">PageEditorStudent4</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>Copyright &copy; 2025 | Designed By Chathuni Abewickrama</p>
+      </div>
+    </footer>
+  </body>
+</html>
